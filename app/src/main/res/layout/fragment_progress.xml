@@ -1,17 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Progress">
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="43dp">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/foto_perfil"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="56dp"
+        android:src="@drawable/perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/barra_cinza_completa"
+        android:layout_width="280dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_perfil">
+
+        <LinearLayout
+            android:id="@+id/barra_laranja_progressao"
+            android:layout_width="140dp"
+            android:layout_height="11dp"
+            android:background="@drawable/rounded_corners_2"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="413dp" />
+    </LinearLayout>
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Progress Fragment"
-        android:textSize="26dp" />
+        android:id="@+id/nome_perfil"
+        android:layout_width="280dp"
+        android:layout_marginEnd="63dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="32dp"
+        android:text="Gabriel Siqueira Rodrigues"
+        android:textAlignment="center"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto_perfil" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="50dp"
+        android:layout_height="11dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="34dp"
+        android:text="Experience"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/barra_cinza_task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_cinza_completa"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/quant_experience"
+        android:layout_width="40dp"
+        android:layout_height="11dp"
+        android:text="50/100"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/barra_cinza_task"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_cinza_completa"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <LinearLayout
+        android:id="@+id/barra_cinza_task"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_cinza_completa" >
+
+        <LinearLayout
+            android:id="@+id/retangulo_laranja_task"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners_2"
+
+            app:layout_constraintBottom_toBottomOf="@+id/barra_cinza_task"
+            app:layout_constraintStart_toStartOf="@+id/barra_cinza_task"
+            app:layout_constraintTop_toBottomOf="@+id/barra_cinza_completa">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_shape"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:text="Lorem ipsum" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/barra_cinza_task_2"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_corners"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_cinza_task">
+
+        <LinearLayout
+            android:id="@+id/retangulo_laranja_task_2"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners_2"
+
+            app:layout_constraintBottom_toBottomOf="@+id/barra_cinza_task"
+            app:layout_constraintStart_toStartOf="@+id/barra_cinza_task"
+            app:layout_constraintTop_toBottomOf="@+id/barra_cinza_completa">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/circle_shape" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:text="Lorem ipsum" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/barra_cinza_task_3"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_corners"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_cinza_task_2">
+
+        <LinearLayout
+            android:id="@+id/retangulo_laranja_task_3"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners_2"
+
+            app:layout_constraintBottom_toBottomOf="@+id/barra_cinza_task"
+            app:layout_constraintStart_toStartOf="@+id/barra_cinza_task"
+            app:layout_constraintTop_toBottomOf="@+id/barra_cinza_completa">
+
+            <LinearLayout
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/circle_shape" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="217dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:text="Lorem ipsum" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
