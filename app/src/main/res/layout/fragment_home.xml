@@ -1,26 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="43dp">
 
-    tools:context=".Home">
+    <ImageView
+        android:id="@+id/foto_perfil"
+        android:layout_width="121dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- TODO: Update blank fragment layout -->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/nome_perfil"
+        android:layout_width="216dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+
+        android:layout_marginBottom="28dp"
+        android:text="Gabriel S. Rodrigues"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/barra_cinza_completa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/foto_perfil" />
+
+    <LinearLayout
+        android:id="@+id/barra_cinza_completa"
+        android:layout_width="214dp"
+        android:layout_height="11dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/barra_laranja_progressao"
+            android:layout_width="107dp"
+            android:layout_height="11dp"
+            android:background="@drawable/rounded_corners_2"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="413dp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="50dp"
+        android:layout_height="11dp"
+        android:layout_marginTop="8dp"
+        android:text="Experience"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_cinza_completa" />
+
+    <TextView
+        android:id="@+id/quant_experience"
+        android:layout_width="40dp"
+        android:layout_height="11dp"
+        android:layout_marginTop="8dp"
+        android:text="50/100"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra_cinza_completa" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="323dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginHorizontal="40dp"
+        android:background="#eee"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foto_perfil">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Home Fragment"
-            android:textSize="26dp"
-            tools:layout_editor_absoluteX="112dp"
-            tools:layout_editor_absoluteY="428dp" />
+            android:paddingStart="10dp"
+            android:text="Task1" />
+    </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:layout_gravity="start"
+        android:backgroundTint="#4CA976"
+        android:text="+"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.428" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:backgroundTint="#ffa500"
+        android:layout_marginEnd="12dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/layout_task2"
+        android:layout_width="323dp"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="35dp"
+        android:background="#eee"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/text_task_2"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:text="Task2" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_green_2"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="#4CA976"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_task2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_task2"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <Button
+        android:id="@+id/button_orange_2"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:backgroundTint="#ffa500"
+        android:layout_marginEnd="12dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_task2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_task2" />
+
+    <LinearLayout
+        android:id="@+id/layout_task3"
+        android:layout_width="323dp"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="35dp"
+        android:background="#eee"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_task2">
+
+        <TextView
+            android:id="@+id/text_task_3"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:text="Task3" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_green_3"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="#4CA976"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_task3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_task3"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <Button
+        android:id="@+id/button_orange_3"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:backgroundTint="#ffa500"
+        android:layout_marginEnd="12dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_task3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_task3" />
+
+    <LinearLayout
+        android:id="@+id/layout_task4"
+        android:layout_width="323dp"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="35dp"
+        android:background="#eee"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_task3">
+
+        <TextView
+            android:id="@+id/text_task_4"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:text="Task4" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_green_4"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="12dp"
+        android:backgroundTint="#4CA976"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_task4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_task4"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <Button
+        android:id="@+id/button_orange_4"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:backgroundTint="#ffa500"
+        android:layout_marginEnd="12dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_task4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_task4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
