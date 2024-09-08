@@ -164,7 +164,7 @@
         app:layout_constraintTop_toBottomOf="@+id/barra_cinza_task_2">
 
         <LinearLayout
-            android:id="@+id/retangulo_laranja_task_3"
+            android:id="@+id/retangulo_roxo"
             android:layout_width="40dp"
             android:layout_height="50dp"
             android:background="@drawable/rounded_corners_2"
